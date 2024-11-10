@@ -1,0 +1,10 @@
+GET http://localhost:8080/api/notes
+
+###
+POST  http://localhost:8080/api/notes
+Content-Type: application/json
+
+{
+  "title": "Nota de ejemplo",
+  "content": "Este es el contenido de la nota."
+}
