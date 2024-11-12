@@ -1,5 +1,6 @@
 package com.javaworks.JavaWorks.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,5 +18,6 @@ public class Supplier {
     private String Contact;
 
     @OneToMany(mappedBy = "supplier")
+    @JsonIgnoreProperties("supplier")
     private List<Product>  product;
 }
